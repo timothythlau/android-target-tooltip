@@ -228,6 +228,8 @@ public final class Tooltip {
         void onTooltipShown (final TooltipView view);
 
         void onTooltipHidden (final TooltipView view);
+
+        void onTooltipTouch(final TooltipView view);
     }
 
     @SuppressLint ("ViewConstructor")
@@ -1300,6 +1302,8 @@ public final class Tooltip {
                 }
 
                 if (containsTouch) {
+                    mCallback.onTooltipTouch(this);
+
                     if (ClosePolicy.touchInside(mClosePolicy)) {
                         onClose(true, true, false);
                     }

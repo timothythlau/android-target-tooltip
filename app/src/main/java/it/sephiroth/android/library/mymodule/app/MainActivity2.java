@@ -344,6 +344,11 @@ public class MainActivity2 extends AppCompatActivity implements OnPageChangeList
         }
 
         @Override
+        public void onTooltipTouch(Tooltip.TooltipView view) {
+            Log.d(TAG, "onTooltipTouch: " + view.getTooltipId());
+        }
+
+        @Override
         public void onCheckedChanged (final CompoundButton buttonView, final boolean isChecked) {
             Log.i(TAG, "onCheckedChanged: " + buttonView.getId() + ", checked: " + isChecked);
 

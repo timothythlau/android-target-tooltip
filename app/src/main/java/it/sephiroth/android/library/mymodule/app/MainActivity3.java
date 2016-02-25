@@ -184,6 +184,10 @@ public class MainActivity3 extends AppCompatActivity implements AdapterView.OnIt
                             @Override
                             public void onTooltipHidden (Tooltip.TooltipView view) {
                             }
+
+                            @Override
+                            public void onTooltipTouch(Tooltip.TooltipView view) {
+                            }
                         })
                     .build());
             mCurrentTooltip.show();
