@@ -1302,7 +1302,9 @@ public final class Tooltip {
                 }
 
                 if (containsTouch) {
-                    mCallback.onTooltipTouch(this);
+                    if (mCallback != null) {
+                        mCallback.onTooltipTouch(this);
+                    }
 
                     if (ClosePolicy.touchInside(mClosePolicy)) {
                         onClose(true, true, false);
