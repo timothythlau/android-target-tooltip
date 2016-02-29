@@ -236,7 +236,7 @@ public final class Tooltip {
     static class TooltipViewImpl extends ViewGroup implements TooltipView {
         public static final int TOLERANCE_VALUE = 10;
         private static final String TAG = "TooltipView";
-        private static final List<Gravity> GRAVITY_LIST = new ArrayList<>(Arrays.asList(LEFT, RIGHT, TOP, BOTTOM, CENTER));
+        private static final List<Gravity> GRAVITY_LIST = new ArrayList<>(Arrays.asList(TOP, BOTTOM, LEFT, RIGHT, CENTER));
         private final List<Gravity> viewGravities = new ArrayList<>(GRAVITY_LIST);
         private final long mShowDelay;
         private final int mTextAppearance;
