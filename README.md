@@ -5,12 +5,12 @@ Create Toast like tooltips, physical targets can be specified, or even points on
 Many additional features and customizations. Just look at the samples Activities.
 
 [![Build Status](https://travis-ci.org/sephiroth74/android-target-tooltip.svg?branch=master)](https://travis-ci.org/sephiroth74/android-target-tooltip)
-[ ![Download](https://api.bintray.com/packages/bintray/jcenter/it.sephiroth.android.library.targettooltip%3Atarget-tooltip-library/images/download.svg) ](https://bintray.com/bintray/jcenter/it.sephiroth.android.library.targettooltip%3Atarget-tooltip-library/_latestVersion)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/it.sephiroth.android.library.targettooltip/target-tooltip-library/badge.svg)](https://maven-badges.herokuapp.com/maven-central/it.sephiroth.android.library.targettooltip/target-tooltip-library)
 
 Installation
 ===
 
-	compile 'it.sephiroth.android.library.targettooltip:target-tooltip-library:+'
+	compile 'it.sephiroth.android.library.targettooltip:target-tooltip-library:1.3.14'
 	
 
 Usage
@@ -29,7 +29,7 @@ Usage
 			.withArrow(true)
 			.withOverlay(true)
 			.typeface(mYourCustomFont)
-			floatingAnimation(AnimationBuilder.DEFAULT)
+			.floatingAnimation(AnimationBuilder.DEFAULT)
 			.build()
 		).show();
 
@@ -51,7 +51,12 @@ Tooltip style can be customized in your style object:
         <attr name="android:textAppearance" />
         <attr name="ttlm_overlayStyle" format="reference" />
         <attr name="ttlm_elevation" format="dimension" />
+
+        <!-- font file path inside your assets folder -->
         <attr name="ttlm_font" format="string" />
+
+        <!-- textview text gravity -->
+        <attr name="android:gravity" />
     </declare-styleable>
 
 
